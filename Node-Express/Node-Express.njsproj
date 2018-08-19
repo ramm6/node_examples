@@ -11,7 +11,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>ec6999fc-a5b5-48d0-a371-036e4b6d54ca</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>server.js</StartupFile>
+    <StartupFile>index.js</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -28,13 +28,23 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="server.js" />
+    <Compile Include="routes\dishRouter.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="index.js" />
+    <Compile Include="routes\leaderRouter.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="routes\promoRouter.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Content Include="package.json" />
     <Content Include="public\404.html" />
     <Content Include="public\aboutus.html" />
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="routes\" />
     <Folder Include="public\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
