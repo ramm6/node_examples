@@ -1,0 +1,12 @@
+{
+  "name": "node-express",
+  "version": "0.0.0",
+  "description": "Node-Express",
+  "main": "server.js",
+  "author": {
+    "name": "Ram"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
