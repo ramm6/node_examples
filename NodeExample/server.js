@@ -1,16 +1,15 @@
 var rect = require('./rect');
-//{
-//    area: (x, y) => x * y,
-//    perimeter: (x, y) => 2 * (x + y)
-//};
 var solveRect = (x, y) => {
+    rect(x, y, (err, rectangle) => {
+        if (err) {
+            console.log('ERROR: ' + err.message);
+        } else {
+            console.log('Rect area : ' + rectangle.area());
+            console.log('Rect perimeter : ' + rectangle.perimeter());
+        }
+    });
 
-    if (x <= 0 || y <= 0) {
-        console.log('Rectangle dimentions must be greater than zero. l = ' + x + ' and b = ' + y);
-    } else {
-        console.log('Rect area : ' + rect.area(x, y));
-        console.log('Rect perimeter : ' + rect.perimeter(x, y));
-    }
+    console.log('This is after rectangle call');
 
 };
 
