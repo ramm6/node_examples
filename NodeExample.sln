@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "NodeExample", "NodeExample\NodeExample.njsproj", "{9911F1CA-8531-4E3E-AB75-F9DB13E735BF}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Node-HTTP", "Node-HTTP\Node-HTTP.njsproj", "{3335EC5E-1D5C-4837-A584-930E37D10E90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9911F1CA-8531-4E3E-AB75-F9DB13E735BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9911F1CA-8531-4E3E-AB75-F9DB13E735BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9911F1CA-8531-4E3E-AB75-F9DB13E735BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3335EC5E-1D5C-4837-A584-930E37D10E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3335EC5E-1D5C-4837-A584-930E37D10E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3335EC5E-1D5C-4837-A584-930E37D10E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3335EC5E-1D5C-4837-A584-930E37D10E90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

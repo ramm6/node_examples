@@ -1,0 +1,14 @@
+{
+  "name": "node-http",
+  "version": "0.0.0",
+  "description": "Node-HTTP",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no tests specified",
+    "start": "node server"
+  },
+  "author": {
+    "name": "Ram",
+    "lisense": "RAM"
+  }
+}
