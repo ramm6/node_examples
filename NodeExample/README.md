@@ -29,8 +29,8 @@ HTTP Response
 		Ordered list of values
 
 *Node HTTP Module*
-	>>const http = require('http');
+	`const http = require('http');`
 **creating server**
-	>>const server = http.createServer((req, res) => { ... });
+	`const server = http.createServer((req, res) => { ... });`
 **Starting server**
-	>>server.listen(port, ...);
+	`server.listen(port, ...);`
