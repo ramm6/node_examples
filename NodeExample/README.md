@@ -27,10 +27,29 @@
 			* Self describing
 			* Easy to understand
 			* Ordered list of values
-
-###Node HTTP Module
+## HTTP mod
+### Node HTTP Module
 	`const http = require('http');`
-###creating server
+### creating server
 	`const server = http.createServer((req, res) => { ... });`
-###Starting server
+### Starting server
 	`server.listen(port, ...);`
+### Reading from request and setting response
+	req.headers, req.body
+	res.setHeader('Content-Type', 'text/html');
+	res.statusCode = 200;
+	res.write('Hello');
+	res.end('<html><body><h1>Hello World</h1></body></html>');
+
+## Node PATH module
+`
+	const path = require('path');
+	path.resolve('./public' + fileUrl);
+	path.extname(filePath);
+`
+## Node FS module
+`
+	const fs = require('fs')
+	fs.exists(filepath, function(exists){...})
+	fs.createReadStream(filePath).pipe(res);
+`
