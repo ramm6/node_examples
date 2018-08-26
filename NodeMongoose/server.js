@@ -6,25 +6,39 @@ var dbUrl = 'mongodb://testuser:password@ds133558.mlab.com:33558/testapp';
 const conn = mongoose.connect(dbUrl);
 
 conn.then((db) => {
-    console.log('Connected to mongoose server..');
-    var newDish = Dishes({
-        name: "Uthappizza",
+        console.log('Connected to mongoose server..');
+    Dishes.create({
+        name: "Uthappizzaa",
         description: "Its not at all good taste"
-    });
-
-    newDish.save()
-        .then((dish) => {
-            console.log('New Dish saved.');
-            return Dishes.find({});
+    })
+    .then((dish) => {
+        console.log(dish);
+        return Dishes.findByIdAndUpdate(dish._id, {
+            $set: {
+                description : "Updated test description"
+            }
+        },{
+            new : true
         })
-        .then((dishes) => {
-            console.log(dishes.length + ' Dishes found in server');
-            //return Dishes.remove({});
-        })
-        .then(() => {
-            return mongoose.connection.close(conn);
-        })
-        .catch((err) => {
-            console.log('Error Occured : ' + err.message);
+        .exec();
+    })
+    .then((dish) => {
+        console.log(dish);
+        dish.comments.push({
+            rating: 5,
+            comment: "Test comment",
+            author: 'Rammohana rao B'
         });
+        return dish.save();
+    })
+    .then((dish) => {
+        console.log(dish);
+        return db.collection('dishes').drop();
+    })
+    .then(() => {
+        return db.close();
+    })
+    .catch((err) => {
+        console.log('Error Occured : ' + err.message);
+    });
 })
