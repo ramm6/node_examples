@@ -1,0 +1,16 @@
+{
+  "name": "node-mongoose",
+  "version": "0.0.0",
+  "description": "NodeMongoose",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "author": {
+    "name": "Ram",
+    "email": "ramanji.balaga@gmail.com"
+  },
+  "dependencies": {
+    "mongoose": "^5.2.9"
+  }
+}
